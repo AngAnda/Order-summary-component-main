@@ -1,7 +1,135 @@
+@forward './resets';
+@import './variables';
+@import './typography';
+
+
 *{
     box-sizing: border-box;
 }
 
 body{
-    color:red;
+    background: url('../images/pattern-background-desktop.svg') no-repeat;
+    background-size: contain ;
+    height: 100vh;
+    width: 100vw;
+    background-color: $pale-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: white;
+    width:400px;
+    height:620px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+header, header img{
+    width: 100%;
+}
+
+section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 30px;
+    text-align: center;
+    & .element{
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+
+.sub-details{
+    display: flex;
+    line-height:1.5rem ; 
+    background-color: $Very-pale-blue;
+    padding:20px;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    & .price-details{
+        margin-left: 20px;
+    }
+    & .change{
+        position: absolute;
+        right: 25px;
+        color:$bright-blue;
+        &:hover{
+            text-decoration: none;
+            color:$light-purple;
+
+        }
+    }
+    & .music-icon{
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+
+
+button{
+    padding: 10px 0;
+    border:none;
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: map-get($font-weights , "medium");
+    cursor: pointer;
+    &.pay{
+        margin-top:30px;
+        border-radius: 10px;
+        background-color:$bright-blue;
+        color:white;
+        box-shadow: 0 10px 5px 5px $Very-pale-blue;
+        &:hover{
+            background-color: $light-purple;
+        }
+    
+    }  
+    &.cancel{
+        background-color: transparent;
+        color:$Desaturated-blue;
+        &:hover{
+            color:$Dark-blue;
+        }
+    }
+}
+
+@media screen and (max-width:769px) {
+    main{
+        width: 350px;
+        height: 580px;
+    }
+
+    section .element{
+        margin-top:20px;
+    }
+
+    
+}
+
+@media screen and (max-width: 321px) {
+
+    main{
+        width: 300px;
+    }
+
+    .sub-details {
+        padding: 15px 10px;
+        & .change{
+            right: 10px;
+        }
+
+        & .price-details{
+            margin-left: 5px;
+        }
+    }
+
+    
 }

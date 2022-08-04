@@ -6,57 +6,50 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-<link rel="stylesheet" href="dist/css/main.css">
+<link rel="stylesheet" href="dist/main.css">
 
   <title>Frontend Mentor | Order summary card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
   <main>
     <header>
-      <div class="img-container-img">
         <img src="images/illustration-hero.svg" alt="Girl listening to music and dancing">
-      </div>
     </header>
     <section>
-      <h1>
+      <h1 class="element">
         Order Summary
       </h1>
-      <p class="text">
+      <p class="text element">
         You can now listen to millions of songs, audiobooks, and podcasts on any 
         device anywhere you like!
       </p>
-      <div class="sub-details">
+      <div class="sub-details element">
         <div class="music-icon">
           <img src="images/icon-music.svg" alt="Symbol of music">
         </div>
-        <strong>
-          Annual Plan
-        </strong>
-        <p class="text">
-          $59.99/year
-        </p>
+
+        <div class="price-details">
+          <strong>
+            Annual Plan
+          </strong>
+          <p class="text">
+            $59.99/year
+          </p>
+        </div>
+
         <a href="" class="change btn">
-          Change
-        </a>
+          Change</a>
       </div>
-      <button class="pay btn">
+      <button class="pay btn element">
         Proceed to Payment
       </button>
-      <button class="cancel btn">
+      <button class="cancel btn element">
         Cancel Order
       </button>
     </section>
   </main>  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>

@@ -1,0 +1,24 @@
+@import "./variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+$font-weights :(
+    "regular": 500,
+    "medium": 700,
+    "bold" : 900
+);
+
+html{
+    font-family:  'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+h1, strong{
+    font-weight: map-get( $font-weights, "bold");
+    color:$Dark-blue;
+}
+
+p{
+    line-height: 1.7rem;
+    color:$Desaturated-blue;
+}
